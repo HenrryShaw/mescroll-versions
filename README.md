@@ -8,6 +8,57 @@
 
 ### v 1.2.5 --- 2017-11-25
 
+##### 一. 新增方法: 
+
+1. <b>mescroll.setPageNum(num)</b> : 设置当前page.num的值  
+
+2. <b>mescroll.setPageSize(size)</b> : 设置当前page.size的值  
+
+3. 获取系统平台 mescroll.os<br/>
+	<b>mescroll.os.ios</b> 为true, 则是ios设备;<br/>
+	<b> mescroll.os.android</b> 为true, 则是android设备;<br/>
+	<b> mescroll.os.pc</b> 为true, 则是PC端;<br/>
+<br/>
+
+##### 二.优化代码:
+1. 结束上拉和下拉状态时,取消进度条的动画,减少资源消耗  
+
+2. 取消mustToTop无意义的配置  
+
+3. 加入常见错误log提示  
+
+4. 调整up配置auto的逻辑,避免初始化时可能会触发两次upCallback的问题  
+<br/>
+
+##### 三.修复重要bug:  
+
+Q. 在iOS的微信,QQ,Safari等浏览器,列表顶部下拉和底部上拉露出浏览器灰色背景,卡顿2秒,不满屏下拉刷新dom元素可能不渲染 ?  
+
+A. 这个问题只存在iOS浏览器; android,PC是正常的; 原因是iOS自身的回弹效果导致的, 解决方法如下:  
+
+1. mescroll.min.css和mescroll.min.js更新到1.2.5版本  
+
+2. 在"mescroll"的div 加入 "mescroll-bounce"子div, 必须结构如下: 
+```
+<div id="mescroll" class="mescroll">
+	<div class="mescroll-bounce">
+
+		//列表内容,如:<ul>列表数据</ul> ...
+		
+	</div>
+</div>
+```
+
+3 . 加入mescroll-bounce的div之后,会禁止ios的webview的touchmove事件,从而阻止iOS的回弹效果.  
+此时除了mescroll的div可以滑动,其他的区域匀无法滑动;    
+如果你希望mescroll之外的某个div可以滑动,则可为这个div加入<b>mescroll-touch</b>的样式即可; 
+ 
+比如你希望顶部导航菜单class="nav-top"的div可接收touchmove事件, 则class="nav-top mescroll-touch"   
+如果添加<b>mescroll-touch-x</b> 则可水平滑动  ; 如果添加 <b>mescroll-touch-y</b> 则可上下滑动
+
+mescroll-bounce的作用只在iOS生效,不必担心会影响到android和pc端的运行效果;   
+mescroll-bounce的结构是固定的,所以您如果用了body为滚动区域,则要更改为div方式了.
+
 <br/>
 <br/>
 
