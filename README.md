@@ -6,6 +6,34 @@
 ## mescroll所有版本:
 <br/>
 
+### v 1.2.8 --- 2017-12-08
+
+##### 一. 新增内容: 
+
+1. 回到顶部按钮可配置添加在指定div. (初始化mescroll时,在 up 配置 toTop的 warpId 即可)  . <a href="http://www.mescroll.com/api.html#options">详见官方文档说明</a>  
+
+2. 新增 <b>mescroll.getStep</b> 计步器, 可用于模拟帧动画. <a href="http://www.mescroll.com/api.html#others">详见官方文档说明</a>  
+
+3. 新增<a href="http://www.mescroll.com/preview.html?name=swiper-tap">轮播菜单案例  mescroll-swiper-tap</a>  
+
+4. 新增<a href="http://www.mescroll.com/preview.html?name=swiper-nav">轮播导航案例 mescroll-swiper-nav</a>  
+
+5. 新增<a href="http://www.mescroll.com/preview.html?name=sticky">吸顶悬浮案例 mescroll-sticky</a>  
+<br/>
+
+##### 二.优化代码:
+1. 集中处理常见异常的提示  
+2. 简化内部dom操作逻辑  
+<br/>
+
+##### 三.修复bug:  
+1. 修复移动端系统停止跟踪触摸事件时,未能及时结束下拉刷新的问题
+2. 修复调用mescroll.destroy(),未移除回到顶部按钮的问题
+3. 修复配置up不使用,可能会输出错误日志的问题
+
+<br/>
+<br/>
+
 ### v 1.2.5 --- 2017-11-25
 
 ##### 一. 新增方法: 
