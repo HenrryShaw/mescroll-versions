@@ -6,6 +6,14 @@
 ## mescroll所有版本:
 <br/>
 
+### v 1.2.8.1 --- 2017-12-10
+
+1. 新增<a href="http://www.mescroll.com/preview.html?name=search">关键词搜索案例  mescroll-search</a>  
+
+2. up的toTop新增html的配置(回到顶部按钮)  具体运用可查看<a href="http://www.mescroll.com/preview.html?name=search">关键词搜索案例  mescroll-search</a>  
+<br/>
+<br/>
+
 ### v 1.2.8 --- 2017-12-08
 
 ##### 一. 新增内容: 
