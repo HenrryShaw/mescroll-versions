@@ -7,11 +7,44 @@
 ##### (所有版本都向下兼容,放心升级)
 <br/>
 
+### v 1.3.0 --- 2017-12-16
+
+##### 一. 新增内容: 
+
+1. 新增<b>mescroll.version</b> : 当前mescroll版本号  
+
+2. 上拉加载 up 新增<b>isBounce</b>的配置 : 是否允许ios的bounce回弹;默认true,允许回弹; 如果配置为false,则可取代1.2.5版本加入的mescroll-bounce  
+
+3. 上拉加载 up 的 toTop和empty 新增<b>supportTap</b>的配置: 默认false,通过onclick添加点击事件;<br/>如果您的运行环境支持tap,则可配置true,可减少点击延时,快速响应事件; (注:微信和PC无法响应tap事件)  
+
+4. 新增<b>mescroll.getToBottom()</b> :  获取当前滚动条到底部的距离  
+<br/>
+
+##### 二.优化代码:  
+
+1. 优化下拉刷新和上拉加载的触发算法  
+
+2. 优化阻止浏览器默认行为的算法  
+
+3. 内部自动判断是否禁止PC端拖拽图片,无需手动屏蔽PC端的document.ondragstart  
+<br/>
+
+##### 三.修复bug:  
+1. 彻底修复在iOS的微信,QQ,Safari等浏览器,列表顶部下拉和底部上拉露出浏览器灰色背景,卡顿2秒的问题  
+  <b>抛弃 1.2.5 通过添加mescroll-bounce的解决方式</b>  
+  现在您只需在 up 配置 isBounce 为 false 即可 <a href="http://www.mescroll.com/qa.html?v=130#q10">解析(必读)</a>  
+  
+2. 修复不满屏或者已经在底部, 无法触发上拉回调的问题  
+
+3. 修复配置了锁定上拉加载, 但仍可上拉的问题
+<br/>
+<br/>
+
 ### v 1.2.8.1 --- 2017-12-10
 
 1. 新增<a href="http://www.mescroll.com/preview.html?name=search">关键词搜索案例  mescroll-search</a>  
 
-2. up的toTop新增html的配置(回到顶部按钮)  具体运用可查看<a href="http://www.mescroll.com/preview.html?name=search">关键词搜索案例  mescroll-search</a>  
+2. 上拉加载 up 的 toTop 新增<b>html</b>的配置(回到顶部按钮)  具体运用可查看<a href="http://www.mescroll.com/preview.html?name=search">关键词搜索案例  mescroll-search</a>  
 <br/>
 <br/>
 
@@ -19,7 +52,7 @@
 
 ##### 一. 新增内容: 
 
-1. 回到顶部按钮可配置添加在指定div. (初始化mescroll时,在 up 配置 toTop的 warpId 即可)  . <a href="http://www.mescroll.com/api.html#options">详见官方文档说明</a>  
+1. 回到顶部按钮可配置添加在指定div. (初始化mescroll时,在 up 配置 toTop的<b>warpId</b>即可)  . <a href="http://www.mescroll.com/api.html#options">详见官方文档说明</a>  
 
 2. 新增 <b>mescroll.getStep</b> 计步器, 可用于模拟帧动画. <a href="http://www.mescroll.com/api.html#others">详见官方文档说明</a>  
 
