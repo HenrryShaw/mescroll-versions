@@ -13,7 +13,7 @@
 
 1. 新增变量: <b>mescroll.version</b> : 当前mescroll版本号  
 
-2. 新增配置: up.<b>isBounce</b> : 是否允许ios的bounce回弹;默认true,允许回弹; 如果配置为false,则可取代1.2.5版本加入的mescroll-bounce  
+2. 新增配置: up.<b>isBounce</b> : 是否允许ios的bounce回弹;默认true,允许回弹;<br/>如果配置为false,则可取代1.2.5版本加入的mescroll-bounce  
 
 3. 新增配置: up.toTop.<b>supportTap</b>和up.empty.<b>supportTap</b> : 默认false,通过onclick添加点击事件;<br/>如果您的运行环境支持tap,则可配置true,可减少点击延时,快速响应事件; (注:微信和PC无法响应tap事件)  
 
