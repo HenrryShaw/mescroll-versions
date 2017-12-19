@@ -7,6 +7,15 @@
 ##### (所有版本都向下兼容,放心升级)
 <br/>
 
+### v 1.3.1 --- 2017-12-19
+
+1. 调整up的auto默认为true (内部已避免up的多次自动触发)  
+
+2. 修复 1.3.0 版本在自定义down的callback时,可能会导致up无法自动触发的问题  
+
+3. 修复配置了clearId或clearEmptyId,在自定义down的callback里调用mescroll.endSuccess()会清空列表的问题  
+<br/>
+
 ### v 1.3.0 --- 2017-12-16
 
 ##### 一. 新增内容: 
